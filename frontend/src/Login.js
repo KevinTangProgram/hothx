@@ -56,21 +56,33 @@ export default function Login()
     //
     return (
         <>
-            <input placeholder="Email" value={email} onChange={handleChangeEmail}></input>
-            <input placeholder="Password" value={password} onChange={handleChangePassword}></input>
-            <button onClick={() => {
-                checkCredentials();
-                clearContents();
-            }}>Login</button>
-            <br></br>
-            <br></br>
-            <input placeholder="Username" value={newName} onChange={handleChangeNewName}></input>
+            <div class="vgrid">
+                <div class="vgridright">
+                <h2>Login Information</h2>
+                <input placeholder="Email" value={email} onChange={handleChangeEmail}></input>
+                <input placeholder="Password" value={password} onChange={handleChangePassword}></input>
+                <button onClick={() => {
+                    checkCredentials();
+                    clearContents();
+                }}>Login</button>   
+                </div>
+
+                <div class = "vgridright">
+                <h2>Create Account</h2>
+              <input placeholder="Username" value={newName} onChange={handleChangeNewName}></input>
             <input placeholder="Email" value={newEmail} onChange={handleChangeNewEmail}></input>
             <input placeholder="Password" value={newPassword} onChange={handleChangeNewPassword}></input>
             <button onClick={() => {
                 createAccount();
                 clearContents();
-            }}>Create Account</button>
+            }}>Create Account</button>  
+                </div>
+            </div>
+            
+            <div class = "vgridright">
+                
+            </div>
+            
         </>
     )
 }
