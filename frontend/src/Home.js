@@ -8,7 +8,7 @@ export default function Home()
     })
 
     useEffect(() => {
-        //console.log("USE EFFECT ", dropboxState)
+        console.log("USE EFFECT ", dropboxState)
         if (dropboxState)
         {
             setDropbox(<header>
@@ -47,12 +47,11 @@ export default function Home()
                         <li class="loadInMovement"><a href="/connect" class="hover-underline-animation">CONNECT</a></li>
                         <li class="loadInMovement"><a href="/people" class="hover-underline-animation">RESOURCES</a></li>
                         <li class="loadInMovement"><a href="/contact" class="hover-underline-animation">CONTACT</a></li>
+                        <a href="/profile" class="hover-underline-animation profile"><img src="plant4.png" alt="Plant"></img></a>
                     </ul>
                 </nav>
             </header>
-            <header class="navOverlayImage">
-                <a href="/profile" class="hover-underline-animation profile"><img src="plant4.png" alt="Plant"></img></a>
-            </header>
+            
             <div class="imageContainer">
                 <img class="imageHead" src="ucla.jpg" alt="UCLA"></img>
                 <div class="titleContainer">
