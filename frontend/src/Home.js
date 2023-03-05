@@ -56,7 +56,7 @@ export default function Home()
             <div class="imageContainer">
                 <img class="imageHead" src="ucla.jpg" alt="UCLA"></img>
                 <div class="titleContainer">
-                    <h1>UCLA Connect</h1>
+                    <h1>UCLA Connect!!!!!</h1>
                     <p1>Bringing UCLA students together</p1>
                 </div>
             </div>
