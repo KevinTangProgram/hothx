@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 
 export default function Login()
@@ -19,6 +19,8 @@ export default function Login()
     const handleChangeNewPassword = (event) => {setNewPassword(event.target.value);}
 
     const URL = "http://localhost:8080";
+
+
 
     function clearContents()
     {
@@ -55,20 +57,37 @@ export default function Login()
     }
     //
     return (
-        <>
+    <>
+                    <header class="navOverlayImage">
+                <nav>
+                    <ul>
+                        <li class="loadInMovement"><a href="/" class="hover-underline-animation">HOME</a></li>
+                        <li class="loadInMovement"><a href="/connect" class="hover-underline-animation">CONNECT</a></li>
+                        <li class="loadInMovement"><a href="/people" class="hover-underline-animation">RESOURCES</a></li>
+                        <li class="loadInMovement"><a href="/contact" class="hover-underline-animation">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <button onClick={() => {
+                    checkCredentials();
+                    clearContents();
+                }}>Login  </button>   
+
             <div class="vgrid">
                 <div class="vgridright">
-                <h2>Login Information</h2>
+                <h2 class="textGreen">Login</h2>
                 <input placeholder="Email" value={email} onChange={handleChangeEmail}></input>
                 <input placeholder="Password" value={password} onChange={handleChangePassword}></input>
                 <button onClick={() => {
                     checkCredentials();
                     clearContents();
-                }}>Login</button>   
+                }}>Login  </button>   
                 </div>
-
+                
+                <p class = "textGreen"> Or: </p>
                 <div class = "vgridright">
-                <h2>Create Account</h2>
+                <h2 class="textGreen">Create Account</h2>
               <input placeholder="Username" value={newName} onChange={handleChangeNewName}></input>
             <input placeholder="Email" value={newEmail} onChange={handleChangeNewEmail}></input>
             <input placeholder="Password" value={newPassword} onChange={handleChangeNewPassword}></input>
@@ -82,7 +101,17 @@ export default function Login()
             <div class = "vgridright">
                 
             </div>
-            
-        </>
+
+
+
+            <img src="backgroundbottom.jpg" alt="topvines" class="top_background"></img>
+
+
+            <video class="videoClass" src="animation.mp4" loop="true" autoplay="true"></video>
+
+    </>
     )
+
+
+  
 }
